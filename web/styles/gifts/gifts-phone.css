@@ -1,0 +1,113 @@
+/* Переход на планшетную версию */
+@media screen and (max-width: 1245px) {
+    /* Секция с подарками */
+    .gifts-section {
+        padding: 0;
+    }
+
+    /* Контейнер во всю ширину страницы */
+    .gifts {
+        width: 100%;
+        padding: 35px 40px;
+
+        border-radius: 0;
+    }
+}
+
+/* Переход на планшетную версию (фикс контейнера с подарками) */
+@media screen and (max-width: 1144px) {
+    /* Добавляем псевдоэлемент который сдвинет последнюю строку влево, тем самым уберет большой отступ между элементами */
+    .gifts__container::after {
+        content: "";
+        width: 230px;
+    }
+}
+
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    /* Контейнер во всю ширину страницы */
+    .gifts {
+        padding: 35px 20px;
+    }
+
+    /* Заголовок секции слева */
+    .gifts .section-title {
+        width: min(345px, 100%);
+
+        text-align: left;
+    }
+
+    /* Контейнер с подарками */
+    .gifts__container {
+        width: 100%;
+        padding: 0;
+
+        /* flex-direction: column; */
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 25px;
+
+        margin: 40px 0 0 0;
+    }
+
+    /* Скрываем псевдоэлемент */
+    .gifts__container::after {
+        display: none;
+    }
+
+    /* Блок с подарком */
+    .gifts__gift {
+        width: 280px;
+        height: 130px;
+        padding: 30px;
+
+        margin-right: 30px;
+    }
+
+    /* Картинка подарка */
+    .gifts__gift-image {
+        position: absolute;
+        top: 5px;
+        right: -50px;
+
+        -webkit-transform: rotate(13deg);
+            -ms-transform: rotate(13deg);
+                transform: rotate(13deg);
+    }
+
+    /* Описание подарка */
+    .gifts__gift-text {
+        width: 190px;
+
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .gifts__gift {
+        width: 200px;
+        padding: 12px;
+        
+        display: -webkit-box;
+        
+        display: -ms-flexbox;
+        
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .gifts__gift-image {
+        width: 75px;
+        height: 75px;
+        top: 20px;
+        right: -35px;
+    }
+
+    .gifts__gift-text {
+        width: 150px;
+    }
+}

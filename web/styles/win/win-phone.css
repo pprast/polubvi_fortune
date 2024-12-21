@@ -1,0 +1,74 @@
+/* Переход на планшетную версию */
+@media screen and (max-width: 1245px) {
+    /* Секция с выигрышем */
+    .win-section {
+        padding: 0;
+    }
+
+    /* Контейнер во всю ширину страницы */
+    .win {
+        width: 100%;
+        height: auto;
+        padding: 40px 40px 80px 40px;
+        background-size: 40%;
+        background-position: right;
+    }
+}
+
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    /* Контейнер во всю ширину страницы */
+    .win {
+        border-radius: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        background-image: none;
+        background-position: bottom 150px left 50%;
+        background-size: auto;
+    }
+
+    /* Заголовок "Поздравляем, вы выиграли" */
+    .win .section-title {
+        width: min(470px, 100%);
+    }
+
+    /* Название приза */
+    .win__gift-name {
+        width: min(470px, 100%);
+
+        font-weight: 700;
+        font-size: 20px;
+
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+
+    /* Описание приза */
+    .win__text {
+        width: min(470px, 100%);
+
+        margin-top: 40px;
+    }
+
+    /* У первого текста отступ больше */
+    .win__text:nth-of-type(1) {
+        margin-top: 20px;
+    }
+
+    /* Кнопка "Получить приз" */
+    .win .button-green {
+        width: min(470px, 100%);
+
+        margin-top: 382px;
+    }
+}

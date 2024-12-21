@@ -1,0 +1,16 @@
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    /* Секция с колесом */
+    .wheel-section {
+        padding: 35px 20px;
+
+        margin-top: 0;
+    }
+
+    /* Кнопки */
+    .wheel__buttons {
+        width: min(490px, 100%);
+
+        margin-top: 40px;
+    }
+}

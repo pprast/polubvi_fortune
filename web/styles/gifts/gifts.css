@@ -1,0 +1,160 @@
+.rewards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    width: min(1240px, 100%);
+    padding: 40px 20px;
+
+    border-radius: 20px;
+    background-color: #f8f8f8; /* Светлый фон для минималистичного стиля */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Лёгкая тень для глубины */
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rewards-image {
+    width: 330px;
+    height: 280px;
+    background-image: url('../../assets/win.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px; /* Небольшие скругления */
+}
+
+.rewards-details {
+    color: #333333; /* Тёмно-серый текст для профессионального вида */
+    max-width: 700px;
+}
+
+.rewards-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #222222; /* Чуть более тёмный оттенок заголовка */
+    font-weight: 600; /* Полужирный, но не слишком тяжёлый */
+    letter-spacing: 0.5px;
+}
+
+.rewards-details p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555555; /* Средний серый для текста */
+}
+
+.rewards-details ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.rewards-details ul li {
+    font-size: 1em;
+    margin-bottom: 12px;
+    color: #444444; /* Лёгкий акцент для текста */
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee; /* Линии между пунктами */
+}
+
+.rewards-section {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+
+
+
+
+
+/* Секция с подарками */
+.gifts-section {
+    width: 100%;
+    padding: 35px;
+}
+
+/* Контейнер с блоком */
+.gifts {
+    width: min(1240px, 100%);
+    padding: 60px 40px;
+
+    border-radius: 30px;
+    background-color: #1c6510;
+
+    margin: 0 auto;
+}
+
+
+/* Контейнер с подарками */
+.gifts__container {
+    width: 100%;
+    padding-right: 20px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 65px 40px;
+
+    margin-top: 47px;
+}
+
+/* Блок с подарком */
+.gifts__gift {
+    width: 230px;
+    height: 150px;
+    position: relative;
+    padding: 16px;
+
+    border-radius: 15px; 
+    background: rgba(62, 62, 62, 0.2);
+}
+
+/* Обводка подарка */
+.gifts__gift::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    
+    padding: 2px; 
+    border-radius: 15px;
+    background: -o-linear-gradient(355deg, #f7ce89 0%, #d53831 100%);
+    background: linear-gradient(95deg, #f7ce89 0%, #d53831 100%);
+    -webkit-mask: 
+       -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, 
+       -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+
+    mask: 
+        -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, 
+        -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)); 
+    mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude; 
+}
+
+/* Картинка подарка */
+.gifts__gift-image {
+    position: absolute;
+    top: -5px;
+    right: -26px;
+    -webkit-transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+            transform: rotate(13deg);
+}
+
+/* Описание подарка */
+.gifts__gift-text {
+    width: 130px;
+    font-size: 18px;
+}

@@ -1,0 +1,139 @@
+/* Секция с колесом */
+.wheel-section {
+    width: 100%;
+    padding: 35px;
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+
+/* При вращении колеса с низу больше отступ */
+.wheel-section.spin {
+    padding-bottom: 108px;
+}
+
+/* Контейнер с блоком */
+.wheel {
+    width: min(1240px, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+/* Обвертка канваса с колесом */
+.wheel__canvas-wrapper {
+    width: min(650px, 100%);
+    aspect-ratio : 1 / 1;
+    position: relative;
+
+    margin-top: 40px;
+}
+
+/* Канвас чуть дальше от центра */
+#wheel-canvas {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+    pointer-events: none;
+}
+
+/* Круг поверх канваса */
+.wheel__canvas-border {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 50%;
+    border: clamp(1px, 0.5vw, 5px) solid #ffffff;
+    -webkit-box-shadow: inset 0 15px 20px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: inset 0 15px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Круг в центре */
+.wheel__canvas-center {
+    width: clamp(37px, 3vw, 72px);
+    height: clamp(37px, 3vw, 72px);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: #ff7eaa;
+    -webkit-box-shadow: 10px 5px 25px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 10px 5px 25px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Указатель на приз */
+.wheel__canvas-pointer {
+    width: clamp(20px, 1vw, 74px);
+    height: clamp(30px, 1vw, 105px);
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+
+/* Кнопки */
+.wheel__buttons {
+    width: min(260px, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+    position: relative;
+
+
+    -webkit-transition: 1s opacity;
+    -o-transition: 1s opacity;
+    transition: 1s opacity;
+
+    margin-top: 30px;
+}
+
+.wheel__buttons .button-green {
+    width: 100%;
+}
+
+.wheel-spin-overlap {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: var(--z-above);
+
+    cursor: not-allowed;
+}

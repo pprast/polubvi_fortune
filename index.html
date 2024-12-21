@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./web/assets/favicon.ico" type="image/x-icon">
+    <title>Колесо фортуны</title>
+
+    <link rel="stylesheet" href="./web/styles/style.css">
+    <link rel="stylesheet" href="./web/styles/text.css">
+    <link rel="stylesheet" href="./web/styles/buttons.css">
+    <link rel="stylesheet" href="./web/styles/input.css">
+    <link rel="stylesheet" href="./web/styles/checkbox.css">
+
+    <link rel="stylesheet" href="./web/styles/header/header.css">
+    <link rel="stylesheet" href="./web/styles/header/header-phone.css"> 
+
+    <link rel="stylesheet" href="./web/styles/gifts/gifts.css">
+    <link rel="stylesheet" href="./web/styles/gifts/gifts-phone.css">
+
+    <link rel="stylesheet" href="./web/styles/rules/rules.css">
+    <link rel="stylesheet" href="./web/styles/rules/rules-phone.css">
+
+    <link rel="stylesheet" href="./web/styles/registration/registration.css">
+    <link rel="stylesheet" href="./web/styles/registration/registration-done.css">
+    <link rel="stylesheet" href="./web/styles/registration/registration-phone.css">
+
+    <link rel="stylesheet" href="./web/styles/wheel/wheel.css">
+    <link rel="stylesheet" href="./web/styles/wheel/wheel-phone.css">
+
+    <link rel="stylesheet" href="./web/styles/win/win.css">
+    <link rel="stylesheet" href="./web/styles/win/win-phone.css">
+    <link rel="stylesheet" href="./web/styles/win/win-modal.css">
+    <link rel="stylesheet" href="./web/styles/win/win-modal-phone.css">
+
+    <link rel="stylesheet" href="./web/styles/catalog/catalog.css">
+    <link rel="stylesheet" href="./web/styles/catalog/catalog-phone.css">
+</head>
+<body>
+    <article>
+        <header>
+            <div class="header-container">
+                <p class="header-container__logo">POLUBVI</p>
+                <h1 class="section-title">Колесо фортуны</h1>
+                <p class="header-container__text">Добро пожаловать в игру «Колесо фортуны» от POLUBVI!<br>
+                    Это ваш шанс получить невероятные подарки и приятные бонусы от нашей студии.<br>
+                    Здесь выигрывают все — выбирайте свою удачу и получайте приз!</p>
+                <button class="button-green" id="goto-registration">Попробовать удачу</button>
+            </div>
+        </header>
+
+        <section class="rewards-section" id="gifts1">
+            <div class="rewards-wrapper">
+                <div class="rewards-details">
+                    <h2>Призы от студии маникюра и педикюра «ПОЛЮБВИ»</h2>
+                    <p>Участвуйте в нашем розыгрыше и получите один из следующих подарков:</p>
+                    <ul>
+                        <li>Любой дизайн в подарок — выразите свою индивидуальность.</li>
+                        <li>5 минут массажа рук — расслабьтесь и почувствуйте комфорт.</li>
+                        <li>Скидка в размере 10% на услуги салона.</li>
+                        <li>Парафинотерапия для мягкости и увлажнения кожи.</li>
+                        <li>Лимонад с собой — наслаждайтесь освежающим напитком.</li>
+                        <li>Кофе с собой — добавьте уюта в свой день.</li>
+                    </ul>
+                    <p>Поторопитесь! Эти приятные бонусы ждут именно вас!</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="wheel-section" id="wheel">
+            <div class="wheel">
+                <h1 class="section-title">Испытайте свою удачу</h1>
+
+                <div class="wheel__canvas-wrapper">
+                    <!-- Колесо фортуны с картинками -->
+                    <canvas id="wheel-canvas" width="1280" height="1280" data-responsiveScaleHeight="true">
+                        <p>Извините, ваш браузер нет поддерживает&lt;canvas&gt; элемент. Попробуйте открыть страницу в другом браузере.</p>
+                    </canvas>
+
+                    <!-- Круг поверх канваса -->
+                    <div class="wheel__canvas-border"></div>
+
+                    <!-- Круг в центре -->
+                    <div class="wheel__canvas-center"></div>
+
+                    <!-- Указатель на приз -->
+                    <svg class="wheel__canvas-pointer" width="75" height="106" viewBox="0 0 75 106" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_223_219)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M73.9941 37.6663C73.998 37.4447 74 37.2226 74 37C74 16.5655 57.4345 0 37 0C16.5655 0 0 16.5655 0 37C0 39.4527 0.238652 41.8497 0.694 44.1689V46.5589C0.694 46.8514 0.736771 47.1423 0.820953 47.4224L3.87124 57.5716C3.95661 57.8556 4.08362 58.1254 4.24814 58.3722L14 73L34.9817 104.249C36.1776 106.03 38.8023 106.017 39.98 104.224L59.5 74.5L70.2549 58.3676C70.4174 58.1238 70.5434 57.8576 70.6287 57.5774L74.1761 45.9272C74.2623 45.644 74.3062 45.3495 74.3062 45.0534V39C74.3062 38.5209 74.1938 38.068 73.9941 37.6663Z"
+                                fill="#fff" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_223_219" x="0" y="0" width="78.3062" height="115.576"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dx="4" dy="10" />
+                                <feGaussianBlur stdDeviation="10" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_223_219" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="wheel__buttons">
+                    <div class="wheel-spin-overlap"></div>
+                    <button class="button-green" id="wheel-spin" disabled>Крутить</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="win-section" id="win">
+            <div class="win">
+                <h1 class="section-title">Поздравляем, вы выиграли:</h1>
+                <h2 class="win__gift-name">Название приза</h2>
+                <p class="win__text">Команда POLUBVI поздравляет вас с выигрышем! </br>
+                    Мы рады, что вы стали частью нашего розыгрыша и доверяете нам заботу о ваших руках. </br>
+                    Ваш приз — это не просто подарок, а возможность насладиться профессиональным уходом и добавить немного удовольствия в ваш день. </br>
+                </p>
+            </div>
+        </section>
+
+
+
+    </article>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- IMask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.0/imask.min.js"></script>
+
+    <!-- Конфиг с настройками для отображения колеса -->
+    <script src="./web/scripts/config.js"></script>
+
+    <!-- Навигация -->
+    <script src="./web/scripts/navigation.js"></script>
+
+    <!-- Отображения подарков и колеса фортуны -->
+    <script src="./web/scripts/wheel-render.js"></script>
+    <script src="./web/scripts/wheel-spin.js"></script>
+    <script src="./web/scripts/gifts.js"></script>
+
+    <!-- Регистрация -->
+    <script src="./web/scripts/registration.js"></script>
+
+    <!-- Модальное окно "Карьерный консультант" -->
+    <script src="./web/scripts/win-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* Правила внутри секции регистрации */
+/* .registration__rules {} */
+
+/* Нумерованный список правил */
+.registration__rules ol {
+    padding-left: 20px;
+    
+    margin-top: 40px;
+}
+
+/* Текст правил */
+.registration__rules ol li {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Текст "Обратите внимание..." */
+.registration__rules-text {
+    width: min(437px, 100%);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    
+    margin-top: 25px;
+}

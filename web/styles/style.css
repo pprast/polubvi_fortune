@@ -1,0 +1,127 @@
+:root {
+    /* Основные цвета */
+    --bg-main: #fff;
+    --bg-gray: #1B1B1B;
+
+    /* Основные уровни */
+    --z-under: -1;
+    --z-above: 1;
+    --z-modal: 999;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+
+/* Вся полоса прокрутки */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Задний фон полосы прокрутки */
+*::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #ff94b8;
+}
+
+/* Полоса прокрутки */
+*::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+html, body, article {
+    width: 100%;
+    height: 100%;
+}
+
+article {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffdce8;
+}
+
+/* Переход на планшетную версию */
+@media screen and (max-width: 1245px) {
+    article {
+        background-color: #ffdce8;
+    }
+
+    /* Задний фон полосы прокрутки */
+    *::-webkit-scrollbar-track {
+        background-color: #ff94b8;
+    }
+}
+
+section, header {
+    width: 100%;
+}
+
+
+/* Отключение прокрутки у страницы */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    /* Отключение прокрутки у страницы ТОЛЬКО на телефоне (на пк не действует) */
+    body.phone-no-scroll {
+        overflow: hidden;
+    }
+}
+
+
+
+/* Заголовки с градиентом в секциях */
+.section-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    /*text-transform: lowercase;*/
+    background: -o-linear-gradient(355deg, #ff7eaa 0%, #ff4483 100%);
+    background: linear-gradient(95deg, #ff7eaa 0%, #ff4483 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    .section-title {
+        font-weight: 700;
+        font-size: 25px;
+    }
+}
+
+
+#made-by-students {
+    display: none;
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--bg-gray);
+
+    font-size: 18px;
+}
+
+#made-by-students a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--text-white) !important;
+    text-decoration: underline !important;
+    text-decoration-skip-ink: none;
+}

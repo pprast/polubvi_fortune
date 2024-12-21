@@ -1,0 +1,171 @@
+:root {
+    /* Зеленая кнопка */
+    --button-green-bg: #ff81ab;
+    --button-green-bg-hover: #ffdce8;
+    --button-green-text: #fff;
+    --button-green-text-hover: #ff81ab;
+    --button-green-border: #fff;
+
+    --button-greenTp-bg: transparent;
+    --button-greenTp-bg-hover: #d53831;
+    --button-greenTp-text: #FFF;
+    --button-greenTp-text-hover: #fff;
+    --button-greenTp-border: #fff;
+
+    /* Прозрачная кнопка с зеленым border */
+    --button-transparent-bg: transparent;
+    --button-transparent-bg-hover: #F4F3F3;
+    --button-transparent-text: #FFF;
+    --button-transparent-text-hover: #1D2136;
+    --button-transparent-border: #F4F3F3;
+
+
+    /* Отключенная кнопка */
+    --button-gray: #F4F3F3;
+}
+
+/* Стили для кнопок с ссылок */
+button, a {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--button-green-text);
+    text-decoration: none;
+
+    /* Отключаем базовые стили */
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+}
+
+/* У кнопки не выделяется текст */
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Отключенная кнопка */
+button:disabled {
+    color: var(--button-gray) !important;
+    border: 1px solid var(--button-gray) !important;
+    background-color: transparent !important;
+
+    cursor: not-allowed !important;
+}
+
+
+/* Зеленая кнопка */
+.button-green {
+    width: 260px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--button-green-border);
+    background-color: var(--button-green-bg);
+}
+
+/* Перезапись стиля тильды */
+a.button-green {
+    color: var(--button-green-text) !important; 
+}
+
+/* Зеленая кнопка */
+.button-green.transparent {
+    border: 1px solid var(--button-greenTp-border);
+    background-color: var(--button-greenTp-bg);
+    color: var(--button-greenTp-text);
+}
+
+/* Прозрачная зеленая кнопка */
+.button-transparent {
+    width: 260px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--button-transparent-border);
+    background-color: var(--button-transparent-bg);
+
+    color: var(--button-transparent-text);
+}
+
+/* Переход на мобильную версию */
+@media screen and (max-width: 876px) {
+    /* Текст становится жирнее */
+    .button-green {
+        font-weight: 700;
+    }
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+    .button-green:hover {
+        background-color: var(--button-green-bg-hover);
+        color: var(--button-green-text-hover);
+    }
+
+    /* Перезапись стиля тильды */
+    a.button-green:hover {
+        color: var(--button-green-text-hover) !important; 
+    }
+
+    /* Зеленая прозрачная кнопка */
+    .button-green.transparent:hover {
+        background-color: var(--button-greenTp-bg-hover);
+        color: var(--button-greenTp-text-hover);
+    }
+
+    /* Прозрачная белая кнопка */
+    .button-transparent:hover {
+        background-color: var(--button-transparent-bg-hover);
+        color: var(--button-transparent-text-hover);
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+    .button-green:active {
+        background-color: var(--button-green-bg-hover);
+        color: var(--button-green-text-hover);
+    }
+
+    /* Зеленая прозрачная кнопка */
+    .button-green.transparent:active {
+        background-color: var(--button-greenTp-bg-hover);
+        color: var(--button-greenTp-text-hover);
+    }
+
+    /* Перезапись стиля тильды */
+    a.button-green:active {
+        color: var(--button-green-text-hover) !important; 
+    }
+
+    /* Прозрачная белая кнопка */
+    .button-transparent:active {
+        background-color: var(--button-transparent-bg-hover);
+        color: var(--button-transparent-text-hover);
+    }
+}

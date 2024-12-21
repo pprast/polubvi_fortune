@@ -1,0 +1,92 @@
+/* Чекбокс в форме */
+.custom-checkbox {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: calc(28px + 12px); /* Отступ от чекбокса */
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Ссылка на политику конфиденциальности */
+
+    font-weight: 400;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+/* Ссылка на политику конфиденциальности */
+.custom-checkbox a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: underline !important;
+    color: var(--text-white) !important;
+}
+
+/* Прячем стандартный чекбокс */
+.custom-checkbox input[type=checkbox] {
+    height: 0;
+    width: 0;
+    position: absolute;
+
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* Кастомный чекбокс */
+.custom-checkbox span {
+    width: 28px;
+    height: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid #ffffff;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+    .custom-checkbox:hover input[type=checkbox] ~ span {
+        background-color: #5e5e5e;
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+    .custom-checkbox:active input[type=checkbox] ~ span {
+        background-color: #5e5e5e;
+    }
+}
+
+/* Когда чекбокс не активирован нету галочки */
+.custom-checkbox span svg {
+    display: none;
+}
+
+/* Когда чекбокс активирован появляется галочка */
+.custom-checkbox input[type=checkbox]:checked ~ span svg {
+    display: block;
+}

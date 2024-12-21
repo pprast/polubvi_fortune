@@ -1,0 +1,67 @@
+/* Ошибка в форме */
+.form-error {
+    font-size: 16px;
+    color: rgb(220, 38, 38);
+}
+
+
+/* Секция регистрации */
+.registration-section {
+    width: 100%;
+    padding: 35px
+}
+
+/* Контейнер с блоком */
+.registration {
+    width: min(1240px, 100%);
+    height: 930px;
+    padding: 65px 0 0 40px;
+
+    border-radius: 30px;
+    background-color: var(--bg-gray);
+    background-image: url("https://static.tildacdn.com/tild6238-6233-4334-b365-366636353436/registration-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    margin: 0 auto;
+}
+
+/* Обвертка регистрации (Для мобильной версии) */
+.registration__form-wrapper {
+    width: min(500px, 100%);
+}
+
+/* Форма регистрации */
+.registration__form {
+    width: 100%;
+}
+
+/* Заголовок "Регистрация" */
+.registration__form .section-title {
+    margin-top: 54px;
+}
+
+/* Инпуты в форме */
+.registration__form .custom-input {
+    margin-top: 20px;
+}
+
+/* У первого инпута больше отступ сверху */
+.registration__form .custom-input:first-of-type {
+    margin-top: 56px;
+}
+
+/* Отступ сверху у чекбокса */
+.registration__form .custom-checkbox {
+    margin-top: 30px;
+}
+
+/* Текст ошибки в форме */
+.registration__form .form-error {
+    margin-top: 30px;
+}
+
+/* Кнопка "Отправить" */
+.registration__form .button-green {
+    margin-top: 30px;
+}

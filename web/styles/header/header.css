@@ -1,0 +1,70 @@
+/* Главная секция */
+header {
+    width: 100%;
+    padding: 35px;
+}
+
+/* Контейнер с блоком */
+.header-container {
+    width: min(1240px, 100%);
+    padding: 242px 0 60px 40px;
+    position: relative;
+
+    border-radius: 30px;
+    background-color: #fff;
+    background-image: url("../../assets/header-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    margin: 0 auto;
+}
+
+/* Логотип блока */
+.header-container__logo {
+    position: absolute;
+    top: 24px;
+    left: 63px;
+
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ff7eaa;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+}
+
+/* Заголовок "Колесо фортуны" */
+.header-container .section-title {
+    width: 355px;
+
+    line-height: normal;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+
+/* Текст "Что такое колесо..." */
+.header-container__text {
+    width: 420px;
+
+    font-size: 18px;
+    line-height: 1.4;
+    color: #575757;
+
+    margin-top: 28px;
+}
+
+/* Кнопка "Испытать удачу" */
+.header-container .button-green {
+    margin-top: 40px;
+}
+
+/* Кнопка "Призы" */
+.header-container .button-green.transparent {
+    margin-top: 20px;
+}
